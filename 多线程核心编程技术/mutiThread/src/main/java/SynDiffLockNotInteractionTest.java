@@ -1,4 +1,4 @@
-public class SynTestThread implements Runnable {
+public class SynDiffLockNotInteractionTest implements Runnable {
 
 
     public synchronized static  void printA(){
@@ -40,8 +40,8 @@ public class SynTestThread implements Runnable {
 
     public static void main(String[] args) {
 
-        Thread t1 = new Thread(new SynTestThread());
-        Thread t2 = new Thread(new SynTestThread());
+        Thread t1 = new Thread(new SynDiffLockNotInteractionTest());
+        Thread t2 = new Thread(new SynDiffLockNotInteractionTest());
         t1.start();
         t2.start();
 
